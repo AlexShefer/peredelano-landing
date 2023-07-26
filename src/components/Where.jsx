@@ -9,8 +9,6 @@ function Where() {
             .then((data) => setEvents(data.events));
     }, []);
 
-    console.log(events);
-
     return <h1>Where</h1>;
 }
 

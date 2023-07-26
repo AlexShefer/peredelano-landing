@@ -1,7 +1,13 @@
-import React from "react";
+import "./Button.css";
 
-function Button() {
-    return <h1>Button</h1>;
+function Button({ children, className }) {
+    return (
+        <>
+            <a href="#" className={`button ${className}`}>
+                {children}
+            </a>
+        </>
+    );
 }
 
 export default Button;

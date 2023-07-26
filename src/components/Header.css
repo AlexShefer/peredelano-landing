@@ -1,0 +1,58 @@
+.first {
+    min-height: 100vh;
+    background-color: var(--header-gradient);
+    background-image: url("../assets/header/main.webp");
+    background-size: cover;
+    background-position: left bottom;
+    padding: 5.5em 1em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+}
+.first__title {
+    padding: 1.25em 0;
+    font-size: 1.1rem;
+}
+
+.first__screen-logo {
+    background-image: url("../assets/header/logo_screen_mobile.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%; /* Set background image size to 100% of the div's width and height */
+    background-position: center;
+    width: 100%;
+    height: 100px;
+    max-width: 400px;
+    position: relative;
+}
+.first__title_pink {
+    color: var(--pink-text);
+}
+.first .first__btn {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.first .first__btn__mobile {
+    margin-top: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .first__screen-logo {
+        background-image: url("../assets/header/logo_screen.png");
+        width: 100%;
+        height: 252px;
+        max-width: 922px;
+    }
+    .first .first__btn {
+        display: block;
+    }
+
+    .first .first__btn__mobile {
+        display: none;
+    }
+}
