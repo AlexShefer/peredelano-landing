@@ -55,4 +55,18 @@
     .first .first__btn__mobile {
         display: none;
     }
+    .first__screen-logo::after {
+        background: url("../assets/header/computer_pic.png");
+    }
+
+    .first__screen-logo::after {
+        content: "";
+        position: absolute;
+        width: 221px;
+        height: 213px;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        bottom: -65%;
+        left: 7%;
+    }
 }

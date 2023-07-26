@@ -9,7 +9,11 @@ function Where() {
             .then((data) => setEvents(data.events));
     }, []);
 
-    return <h1>Where</h1>;
+    return (
+        <div id="where">
+            <h1>Where section</h1>
+        </div>
+    );
 }
 
 export default Where;

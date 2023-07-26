@@ -1,7 +1,11 @@
 import React from "react";
 
 function Footer() {
-    return <h1>Footer</h1>;
+    return (
+        <div id="whom">
+            <h1>Whom section</h1>
+        </div>
+    );
 }
 
 export default Footer;
