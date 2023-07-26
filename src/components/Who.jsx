@@ -1,3 +1,4 @@
+import Carousel from "./Carousel";
 import "./Who.css";
 
 function Who() {
@@ -28,6 +29,7 @@ function Who() {
                         ещё.
                     </p>
                 </div>
+                <Carousel data={images} />
             </div>
         </section>
     );
