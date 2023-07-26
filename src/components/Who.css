@@ -1,0 +1,37 @@
+.slides {
+    background-color: var(--dark-background);
+    color: var(--white-text);
+    text-align: left;
+}
+.container {
+    padding: 4.375em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.slides__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 0.85em;
+}
+
+.slides__title_pink {
+    color: var(--pink-text);
+}
+.row {
+    max-width: 480px;
+}
+.slides__text {
+    font-size: 1.25rem;
+    margin-bottom: 1.25em;
+}
+
+@media screen and (min-width: 768px) {
+    .row {
+        display: flex;
+        gap: 2em;
+        max-width: 1024px;
+    }
+}
