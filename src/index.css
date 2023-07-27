@@ -25,6 +25,7 @@
     --white-text: #ffffff;
     --blue-text: #4178e5;
     --pink-text: #c35eb9;
+    --gray-text: #D4D4D4;
 
 }
 
@@ -39,9 +40,11 @@ a {
     color: var(--black-text);
 }
 
-.first__title {
-    font-size: 1rem;
-    font-weight: 500;
+.container {
+    padding: 4.375em 1em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @media screen and (min-width: 768px) {

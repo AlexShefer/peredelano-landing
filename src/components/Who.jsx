@@ -15,7 +15,7 @@ function Who() {
                     очередь{" "}
                     <span className="slides__title_pink">сообщество</span>
                 </h2>
-                <div className="row">
+                <div className="slides__row">
                     <p className="slides__text">
                         Мы существуем для того, чтобы у вас на новом месте
                         появились знакомые, друзья и коллеги. Чтобы никто не был

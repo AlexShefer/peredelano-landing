@@ -1,0 +1,118 @@
+.footer {
+    background-color: var(--dark-background);
+    color: var(--white-text);
+    display: flex;
+    justify-content: center;
+}
+.footer__container {
+    padding: 4.375em 1em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.footer__row {
+    display: flex;
+    width: 100%;
+    max-width: 1024px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+}
+.footer__col {
+    max-width: 600px;
+}
+
+.footer__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1.5em;
+}
+.footer__title-blue {
+    color: var(--blue-text);
+}
+
+.footer__description {
+    display: none;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    margin-bottom: 2em;
+    max-width: 400px;
+}
+.footer__description-pink {
+    color: var(--pink-text);
+}
+
+.footer__computer {
+    display: none;
+}
+
+.footer__screen-logo {
+    background-image: url("../assets/events/peredelano_conffooter.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    width: 100%;
+    height: 100px;
+    max-width: 400px;
+    margin: 4.375em 0 2.5em;
+}
+
+.footer__social-icons {
+    display: flex;
+    gap: 1em;
+}
+
+.footer__social-link {
+    background-color: #d4d4d4;
+    border-radius: 50%;
+    padding: 0.5em;
+}
+.footer__social-link__icon {
+    color: var(--black-text);
+    font-size: 1.625rem;
+}
+
+.footer__copyright {
+    color: var(--gray-text);
+    font-family: var(--link-text);
+    font-size: 0.75rem;
+    font-weight: 300;
+    letter-spacing: 0.24px;
+    text-transform: uppercase;
+    margin-top: 2em;
+}
+
+@media screen and (min-width: 768px) {
+    .footer__container {
+        max-width: 1024px;
+        width: 100%;
+        align-items: center;
+    }
+    .footer__description {
+        display: block;
+    }
+    .footer__computer {
+        display: block;
+    }
+    .footer__screen-logo {
+        width: 100%;
+        height: 252px;
+        max-width: 1024px;
+    }
+    .footer__social-link {
+        padding: 1em;
+    }
+    .footer__social-link__icon {
+        font-size: 2.5rem;
+    }
+    .footer__social-icons {
+        align-self: flex-end;
+        margin-top: -7em;
+    }
+    .footer__copyright {
+        margin-top: 4em;
+    }
+}

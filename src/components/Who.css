@@ -4,12 +4,7 @@
     text-align: left;
     user-select: none;
 }
-.container {
-    padding: 4.375em 1em 2em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 .slides__title {
     font-size: 1.5rem;
     font-weight: 600;
@@ -21,7 +16,7 @@
 .slides__title_pink {
     color: var(--pink-text);
 }
-.row {
+.slides__row {
     max-width: 480px;
 }
 .slides__text {
@@ -30,7 +25,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    .row {
+    .slides__row {
         display: flex;
         gap: 5em;
         max-width: 1024px;
