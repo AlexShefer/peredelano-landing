@@ -1,0 +1,15 @@
+.scroll-btn {
+    color: #8bd2ff;
+    background-color: var(--dark-background);
+    font-size: 42px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    border-radius: 50%;
+}
+
+@media screen and (min-width: 1024px) {
+    .scroll-link {
+        display: none;
+    }
+}

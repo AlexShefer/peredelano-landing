@@ -36,7 +36,10 @@ function Navbar() {
     }, []);
 
     return (
-        <header className={`header ${showNavbar ? "show" : "hide"}`}>
+        <header
+            id="navbar"
+            className={`header ${showNavbar ? "show" : "hide"}`}
+        >
             <div className="wrap">
                 <Link
                     to="home"

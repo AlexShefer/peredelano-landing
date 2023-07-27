@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BsArrowRightCircleFill, BsArrowLeftCircleFill } from "react-icons/bs";
 import "./Carousel.css";
 
@@ -16,6 +16,15 @@ function Carousel({ data }) {
             prevState === 0 ? data.length - 1 : prevState - 1
         );
     };
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setSlide((prevState) =>
+                prevState === data.length - 1 ? 0 : prevState + 1
+            );
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, [data.length]);
 
     return (
         <div className="carousel">
