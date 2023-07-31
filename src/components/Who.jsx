@@ -1,11 +1,11 @@
 import "./Who.css";
 
 function Who() {
-    const images = [
-        "../assets/1.webp",
-        "../assets/2.webp",
-        "../assets/11.webp",
-    ];
+    // const images = [
+    //     "../assets/1.webp",
+    //     "../assets/2.webp",
+    //     "../assets/11.webp",
+    // ];
     return (
         <section id="who" className="slides">
             <div className="container">

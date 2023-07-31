@@ -5,7 +5,7 @@ import TabTitle from './TabTitle';
 
 
 const Tabs = (props) => {
-  const { children, preSelectedTabIndex } = props;
+  const { children } = props;
 
   // First tab is shown by default
   const [selectedTabIndex, setSelectedTabIndex] = useState(0);
