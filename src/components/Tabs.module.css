@@ -1,0 +1,21 @@
+.tabs__nav {
+    list-style: none;
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 60px auto ;
+  max-width: 605px;
+  width: 100%;
+  gap: 20px;
+  }
+.tabs__content {
+    max-width: 1240px;
+    width: 100%;
+
+    display: block;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px 20px;
+  }

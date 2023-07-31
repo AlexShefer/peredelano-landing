@@ -1,9 +1,77 @@
+import React from "react";
+import { useEffect, useState } from "react";
+import Card from "./Card";
+import Tabs from "./Tabs";
+import TabPane from "./TabPane";
+import styles from './Where.module.css';
+
+
 function Where() {
     // Send a GET request to the MirageJS server /api/events
+    const [locations, setLocations] = useState([])
+    useEffect(() => {
+      fetch("/api/events")
+        .then((res) => res.json())
+        .then((json) => {
+          setLocations(json.events)
+        })
+    }, [])
+
+    const asiaLocations = locations.filter((i) => {
+      return i.continent === 'asia';
+    })
+    const europeLocations = locations.filter((i) => {
+        return i.continent === 'europe';
+      })
+    const americaLocations = locations.filter((i) => {
+      return i.continent === 'america';
+    })
+    const africaLocations = locations.filter((i) => {
+        return i.continent === 'africa';
+      })
 
     return (
-        <div id="where">
-            <h1>Where section</h1>
+        <div className={styles.locations} id="where">
+            <div className={styles.wrap}>
+                <h2 className={styles.locations__title}>
+                    Мы создаем комьюнити <span className="locations__title locations__title_blue">по всему миру,</span> присоединяйся и в своей стране
+                </h2>
+                <div className={styles.row}>
+                    <p className={styles.locations__text}>
+                        Наша цель — <span className={styles.locations__text && styles.locations__text_pink}>построить</span> на новом месте <span className={styles.locations__text && styles.locations__text_pink}>сообщество единомышленников,</span> которые во всем поддерживают друг друга — это наш ответ на вызовы, которые нам бросила жизнь.               
+                    </p>
+                    <p className={styles.locations__text}>
+                        Мы изобрели <span className={styles.locations__text && styles.locations__text_pink}>Peredelanoconf</span>, потому что увидели — сообществу русскоязычных айтишников по всему миру нужна система, которая позволит им <span className={styles.locations__text && styles.locations__text_pink}>объединяться</span> и <span className={styles.locations__text && styles.locations__text_pink}>помогать</span> друг другу.
+                    </p>
+                </div>
+                <Tabs>
+                        <TabPane title="Европа">
+                            <div className={styles.tabs__content}>{europeLocations && europeLocations.map(
+                                        (location, id) => 
+                                        <Card key={id} date={location.date} city={location.city} description={location.description}/>
+                                    )}</div>
+                        </TabPane>
+                        <TabPane title="Азия">
+                            <div className={styles.tabs__content}>{asiaLocations && asiaLocations.map(
+                                    (location, id) => 
+                                    <Card key={id} date={location.date} city={location.city} description={location.description}/>
+                                )}</div>
+                        </TabPane>
+                        <TabPane title="Америка">
+                            <div className={styles.tabs__content}>{americaLocations && americaLocations.map(
+                                    (location, id) => 
+                                    <Card key={id} date={location.date} city={location.city} description={location.description}/>
+                                )}</div>
+                        </TabPane>
+                        <TabPane title="Африка">
+                            <div className={styles.tabs__content}>{africaLocations && africaLocations.map(
+                                    (location, id) => 
+                                    <Card key={id} date={location.date} city={location.city} description={location.description}/>
+                                )}</div>
+                        </TabPane>
+                </Tabs>
+            </div>
+            
         </div>
     );
 }

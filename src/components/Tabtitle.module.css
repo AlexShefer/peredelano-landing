@@ -1,0 +1,38 @@
+.title {
+        display: flex;
+        max-width: 130px;
+        width: 100%;
+
+}
+  
+  .title[class~='active'] button {
+    background: #E7B9E2;
+    cursor: default;
+  }
+  .tabs__btn {
+    padding: 15px 0;
+    text-decoration: none;
+    color: #303030;
+    font-family: "Martian Mono";
+    font-size: 22px;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    flex-shrink: 0;
+    flex-grow: 1;
+    border-radius: 12px;
+    border: 2px solid #303030;
+    background: #C35EB9;
+    cursor: pointer;
+  }
+  
+  .tabs__btn_active {
+    background: #E7B9E2;
+    cursor: default;
+  }
+  
+  .tabs__btn:not(.tabs__btn_active):hover,
+  .tabs__btn:not(.tabs__btn_active):focus {
+    background-color: #E7B9E2;
+  }
+  
