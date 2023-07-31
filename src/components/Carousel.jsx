@@ -55,7 +55,7 @@ function Carousel({ data }) {
             <span className="carousel__indicators">
                 {data.map((_, index) => {
                     return (
-                        <button
+                        <div
                             key={index}
                             className={
                                 index === slide
@@ -63,7 +63,7 @@ function Carousel({ data }) {
                                     : "carousel__indicator"
                             }
                             onClick={() => setSlide(index)}
-                        ></button>
+                        ></div>
                     );
                 })}
             </span>

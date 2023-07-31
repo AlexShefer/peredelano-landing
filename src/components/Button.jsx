@@ -12,12 +12,19 @@ function Button({ children, className, type, link }) {
                     offset={0}
                     duration={500}
                     className={`button ${className}`}
+                    tabIndex={0}
+                    aria-label={children}
                 >
                     {" "}
                     {children}{" "}
                 </Link>
             ) : (
-                <a href={link} className={`button ${className}`}>
+                <a
+                    href={link}
+                    className={`button ${className}`}
+                    tabIndex={0}
+                    aria-label={children}
+                >
                     {children}
                 </a>
             )}

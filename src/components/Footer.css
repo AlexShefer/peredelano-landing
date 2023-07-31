@@ -70,6 +70,10 @@
     border-radius: 50%;
     padding: 0.5em;
 }
+.footer__social-link:hover,
+.footer__social-link:focus {
+    background-color: #c35eb9;
+}
 .footer__social-link__icon {
     color: var(--black-text);
     font-size: 1.625rem;

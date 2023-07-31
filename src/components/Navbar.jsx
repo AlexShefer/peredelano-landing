@@ -47,6 +47,8 @@ function Navbar() {
                     smooth={true}
                     offset={0}
                     duration={500}
+                    tabIndex={showNavbar ? 0 : -1}
+                    aria-label="Home"
                 >
                     <img src={logoPng} alt="logo" className="header__logo" />
                 </Link>
@@ -60,6 +62,9 @@ function Navbar() {
                         duration={500}
                         className="header__nav-link"
                         activeClass="header__nav-link-active"
+                        tabIndex={showNavbar ? 0 : -1}
+                        aria-label="Кто"
+                        role="button"
                     >
                         кто
                     </Link>
@@ -71,6 +76,9 @@ function Navbar() {
                         duration={500}
                         className="header__nav-link"
                         activeClass="header__nav-link-active"
+                        tabIndex={showNavbar ? 0 : -1}
+                        aria-label="Где"
+                        role="button"
                     >
                         где
                     </Link>
@@ -82,6 +90,9 @@ function Navbar() {
                         duration={500}
                         className="header__nav-link"
                         activeClass="header__nav-link-active"
+                        tabIndex={showNavbar ? 0 : -1}
+                        aria-label="Кому"
+                        role="button"
                     >
                         кому
                     </Link>

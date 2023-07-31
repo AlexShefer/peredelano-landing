@@ -14,7 +14,8 @@
     box-shadow: 10px 10px 0 -1px #4178e5, 10px 10px 0 1px #303030;
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
     background: #e7b9e2;
     box-shadow: 10px 10px 0 -1px #c35eb9, 10px 10px 0 1px #303030;
 }
