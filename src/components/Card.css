@@ -53,3 +53,20 @@
   .mark_bg {
     fill: #E7B9E2;
   }
+  .card__img {
+    height: 220px;
+  }
+  @media screen and (max-width: 520px) {
+    .card__img {
+      height: 200px;
+    }
+    .card__text {
+      font-size: 14px;
+      line-height: 16px;
+  }
+   }
+  @media screen and (max-width: 320px) {
+    .card__img {
+      height: 150px;
+    }
+   }

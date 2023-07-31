@@ -1,13 +1,13 @@
 import React from "react";
 import "./Card.css";
 
-const Card = ({city, date, link, description}) => {
+const Card = ({city, date, link, img, description}) => {
 
     return (
         <>
             <div className="card">
                 
-                    <img src="https://static.wikia.nocookie.net/mlp/images/d/dd/My_Little_Pony_Theme_Song.png/revision/latest/scale-to-width-down/1000?cb=20130805001726&path-prefix=ru" alt="city" className="card__img" />
+                    <img src={`./assets/events/${img}.jpg`}  alt="city" className="card__img" />
                 <h3 className="card__title">{city}</h3>
                 <p className="card__text"> {description} </p>
                 <h3 className="card__title">{date}</h3>

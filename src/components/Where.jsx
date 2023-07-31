@@ -48,25 +48,25 @@ function Where() {
                         <TabPane title="Европа">
                             <div className={styles.tabs__content}>{europeLocations && europeLocations.map(
                                         (location, id) => 
-                                        <Card key={id} date={location.date} city={location.city} description={location.description}/>
+                                        <Card key={id} date={location.date}  img={location.img} city={location.city} description={location.description}/>
                                     )}</div>
                         </TabPane>
                         <TabPane title="Азия">
                             <div className={styles.tabs__content}>{asiaLocations && asiaLocations.map(
                                     (location, id) => 
-                                    <Card key={id} date={location.date} city={location.city} description={location.description}/>
+                                    <Card key={id} date={location.date}  img={location.img} city={location.city} description={location.description}/>
                                 )}</div>
                         </TabPane>
                         <TabPane title="Америка">
                             <div className={styles.tabs__content}>{americaLocations && americaLocations.map(
                                     (location, id) => 
-                                    <Card key={id} date={location.date} city={location.city} description={location.description}/>
+                                    <Card key={id} date={location.date}  img={location.img} city={location.city} description={location.description}/>
                                 )}</div>
                         </TabPane>
                         <TabPane title="Африка">
                             <div className={styles.tabs__content}>{africaLocations && africaLocations.map(
                                     (location, id) => 
-                                    <Card key={id} date={location.date} city={location.city} description={location.description}/>
+                                    <Card key={id} date={location.date}  img={location.img} city={location.city} description={location.description}/>
                                 )}</div>
                         </TabPane>
                 </Tabs>
