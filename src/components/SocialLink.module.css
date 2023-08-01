@@ -1,0 +1,21 @@
+.social_link {
+    background-color: #e7b9e2;
+    border-radius: 50%;
+    padding: 0.5em;
+}
+.social_link:hover,
+.social_link:focus {
+    background-color: #c35eb9;
+}
+.social_link__icon {
+    color: var(--black-text);
+    font-size: 1.625rem;
+}
+@media screen and (min-width: 768px) {
+    .social_link {
+        padding: 1em;
+    }
+    .social_link__icon {
+        font-size: 2.5rem;
+    }
+}

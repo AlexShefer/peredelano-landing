@@ -1,5 +1,6 @@
+import React from "react";
+import styles from "./Who.module.css";
 import Carousel from "./Carousel";
-import "./Who.css";
 
 function Who() {
     const images = [
@@ -8,21 +9,29 @@ function Who() {
         "../assets/11.webp",
     ];
     return (
-        <section id="who" className="slides">
-            <div className="container">
-                <h2 className="slides__title">
-                    <span className="slides__title_pink"> Мы</span> — в первую
-                    очередь{" "}
-                    <span className="slides__title_pink">сообщество</span>
+        <section id="who" className={styles.slides}>
+            {" "}
+            <div className={styles.container}>
+                {" "}
+                <h2 className={styles.slides__title}>
+                    {" "}
+                    <span className={styles.slides__title_pink}> Мы</span> — в
+                    первую очередь{" "}
+                    <span className={styles.slides__title_pink}>
+                        сообщество
+                    </span>
                 </h2>
-                <div className="slides__row">
-                    <p className="slides__text">
+                <div className={styles.slides__row}>
+                    {" "}
+                    <p className={styles.slides__text}>
+                        {" "}
                         Мы существуем для того, чтобы у вас на новом месте
                         появились знакомые, друзья и коллеги. Чтобы никто не был
                         один. Наши конфы проходят в формате уютной домашней
                         вечеринки.
                     </p>
-                    <p className="slides__text">
+                    <p className={styles.slides__text}>
+                        {" "}
                         Специально для того, чтобы людям было проще сойтись и
                         подружиться.После самого ивента сообщество продолжает
                         жить в чате, бесчисленных встречах, сборах и где угодно

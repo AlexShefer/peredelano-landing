@@ -27,16 +27,16 @@
     gap: 3em;
 }
 
-.header__nav-link {
-    font-size: 1.25rem;
+.header__nav__link {
+    font-size: 1rem;
     text-transform: uppercase;
     position: relative;
 }
 
-.header__nav-link:hover::before,
-.header__nav-link-active::before {
-    content: ""; /* Add content to the pseudo-element */
-    position: absolute; /* Set position absolute to position the pseudo-element */
+.header__nav__link:hover::before,
+.header__nav__link_active::before {
+    content: "";
+    position: absolute;
     bottom: -25px;
     left: -10px;
     width: 100%;

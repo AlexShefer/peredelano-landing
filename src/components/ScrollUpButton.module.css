@@ -1,4 +1,4 @@
-.scroll-btn {
+.scroll_btn {
     color: #8bd2ff;
     background-color: var(--dark-background);
     font-size: 42px;
@@ -9,7 +9,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .scroll-link {
+    .scroll_link {
         display: none;
     }
 }

@@ -28,7 +28,7 @@
     text-transform: uppercase;
     margin-bottom: 1.5em;
 }
-.footer__title-blue {
+.footer__title_blue {
     color: var(--blue-text);
 }
 
@@ -41,7 +41,7 @@
     margin-bottom: 2em;
     max-width: 400px;
 }
-.footer__description-pink {
+.footer__description_pink {
     color: var(--pink-text);
 }
 
@@ -49,7 +49,7 @@
     display: none;
 }
 
-.footer__screen-logo {
+.footer__screen_logo {
     background-image: url("../assets/events/peredelano_conffooter.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -60,23 +60,9 @@
     margin: 4.375em 0 2.5em;
 }
 
-.footer__social-icons {
+.footer__social_icons {
     display: flex;
     gap: 1em;
-}
-
-.footer__social-link {
-    background-color: #e7b9e2;
-    border-radius: 50%;
-    padding: 0.5em;
-}
-.footer__social-link:hover,
-.footer__social-link:focus {
-    background-color: #c35eb9;
-}
-.footer__social-link__icon {
-    color: var(--black-text);
-    font-size: 1.625rem;
 }
 
 .footer__copyright {
@@ -101,18 +87,12 @@
     .footer__computer {
         display: block;
     }
-    .footer__screen-logo {
+    .footer__screen_logo {
         width: 100%;
         height: 252px;
         max-width: 1024px;
     }
-    .footer__social-link {
-        padding: 1em;
-    }
-    .footer__social-link__icon {
-        font-size: 2.5rem;
-    }
-    .footer__social-icons {
+    .footer__social_icons {
         align-self: flex-end;
         margin-top: -7em;
     }

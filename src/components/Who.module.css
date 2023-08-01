@@ -5,6 +5,13 @@
     user-select: none;
 }
 
+.container {
+    padding: 4.375em 1em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .slides__title {
     font-size: 1.5rem;
     font-weight: 600;

@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { BsArrowRightCircleFill, BsArrowLeftCircleFill } from "react-icons/bs";
-import "./Carousel.css";
+import styles from "./Carousel.module.css"; // Import styles from the CSS module
 
 function Carousel({ data }) {
     const [slide, setSlide] = useState(0);
@@ -16,6 +16,7 @@ function Carousel({ data }) {
             prevState === 0 ? data.length - 1 : prevState - 1
         );
     };
+
     useEffect(() => {
         const interval = setInterval(() => {
             setSlide((prevState) =>
@@ -27,12 +28,12 @@ function Carousel({ data }) {
     }, [data.length]);
 
     return (
-        <div className="carousel">
+        <div className={styles.carousel}>
             <BsArrowLeftCircleFill
                 onClick={handlePrevSlide}
-                className="carousel__arrow carousel__arrow--left"
+                className={`${styles.carousel__arrow} ${styles.carousel__arrow_left}`}
             />
-            <div className="carousel__slide-container">
+            <div className={styles.carousel__slide_container}>
                 {data.map((img, index) => {
                     return (
                         <img
@@ -41,8 +42,8 @@ function Carousel({ data }) {
                             key={index}
                             className={
                                 index === slide
-                                    ? "carousel__slide"
-                                    : "carousel__slide carousel__slide--hidden"
+                                    ? styles.carousel__slide
+                                    : `${styles.carousel__slide} ${styles.carousel__slide_hidden}`
                             }
                         />
                     );
@@ -50,17 +51,17 @@ function Carousel({ data }) {
             </div>
             <BsArrowRightCircleFill
                 onClick={handleNextSlide}
-                className="carousel__arrow carousel__arrow--right"
+                className={`${styles.carousel__arrow} ${styles.carousel__arrow_right}`}
             />
-            <span className="carousel__indicators">
+            <span className={styles.carousel__indicators}>
                 {data.map((_, index) => {
                     return (
                         <div
                             key={index}
                             className={
                                 index === slide
-                                    ? "carousel__indicator carousel__indicator--active"
-                                    : "carousel__indicator"
+                                    ? styles.carousel__indicator_active
+                                    : styles.carousel__indicator
                             }
                             onClick={() => setSlide(index)}
                         ></div>

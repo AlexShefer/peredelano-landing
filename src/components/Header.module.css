@@ -18,7 +18,7 @@
     font-size: 1.1rem;
 }
 
-.first__screen-logo {
+.first__screen_logo {
     background-image: url("../assets/header/logo_screen_mobile.png");
     background-repeat: no-repeat;
     background-size: 100% 100%; /* Set background image size to 100% of the div's width and height */
@@ -42,7 +42,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    .first__screen-logo {
+    .first__screen_logo {
         background-image: url("../assets/header/logo_screen.png");
         width: 100%;
         height: 252px;
@@ -55,11 +55,11 @@
     .first .first__btn__mobile {
         display: none;
     }
-    .first__screen-logo::after {
+    .first__screen_logo::after {
         background: url("../assets/header/computer_pic.png");
     }
 
-    .first__screen-logo::after {
+    .first__screen_logo::after {
         content: "";
         position: absolute;
         width: 221px;

@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./SocialLink.module.css";
 
 function SocialLink({ link }) {
     return (
@@ -6,12 +7,12 @@ function SocialLink({ link }) {
             <a
                 href={link.link}
                 key={link.name}
-                className="footer__social-link"
+                className={styles.social_link}
                 target="_blank"
                 rel="noopener noreferrer"
             >
                 <link.icon
-                    className="footer__social-link__icon"
+                    className={styles.social_link__icon}
                     aria-label={`Visit ${link.name}`}
                 />
             </a>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Navbar.css";
+import styles from "./Navbar.module.css";
 import logoPng from "../assets/header/logo_small.png";
 import { Link } from "react-scroll";
 
@@ -38,9 +38,11 @@ function Navbar() {
     return (
         <header
             id="navbar"
-            className={`header ${showNavbar ? "show" : "hide"}`}
+            className={`${styles.header} ${
+                showNavbar ? styles.show : styles.hide
+            }`}
         >
-            <div className="wrap">
+            <div className={styles.wrap}>
                 <Link
                     to="home"
                     spy={true}
@@ -50,18 +52,22 @@ function Navbar() {
                     tabIndex={showNavbar ? 0 : -1}
                     aria-label="Home"
                 >
-                    <img src={logoPng} alt="logo" className="header__logo" />
+                    <img
+                        src={logoPng}
+                        alt="logo"
+                        className={styles.header__logo}
+                    />
                 </Link>
 
-                <nav className="header__nav">
+                <nav className={styles.header__nav}>
                     <Link
                         to="who"
                         spy={true}
                         smooth={true}
                         offset={0}
                         duration={500}
-                        className="header__nav-link"
-                        activeClass="header__nav-link-active"
+                        className={styles.header__nav__link}
+                        activeClass={styles.header__nav__link_active}
                         tabIndex={showNavbar ? 0 : -1}
                         aria-label="Кто"
                         role="button"
@@ -74,8 +80,8 @@ function Navbar() {
                         smooth={true}
                         offset={0}
                         duration={500}
-                        className="header__nav-link"
-                        activeClass="header__nav-link-active"
+                        className={styles.header__nav__link}
+                        activeClass={styles.header__nav__link_active}
                         tabIndex={showNavbar ? 0 : -1}
                         aria-label="Где"
                         role="button"
@@ -88,8 +94,8 @@ function Navbar() {
                         smooth={true}
                         offset={0}
                         duration={500}
-                        className="header__nav-link"
-                        activeClass="header__nav-link-active"
+                        className={styles.header__nav__link}
+                        activeClass={styles.header__nav__link_active}
                         tabIndex={showNavbar ? 0 : -1}
                         aria-label="Кому"
                         role="button"

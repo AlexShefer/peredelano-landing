@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
-import "./ScrollUpButton.css";
+import styles from "./ScrollUpButton.module.css";
 
 function ScrollUpButton() {
     const [isVisible, setIsVisible] = useState(false);
@@ -34,9 +34,9 @@ function ScrollUpButton() {
                     smooth={true}
                     offset={0}
                     duration={500}
-                    className="scroll-link"
+                    className={styles.scroll_link}
                 >
-                    <BsFillArrowUpCircleFill className="scroll-btn" />
+                    <BsFillArrowUpCircleFill className={styles.scroll_btn} />
                 </Link>
             )}
         </>
