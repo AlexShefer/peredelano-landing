@@ -4,7 +4,7 @@ import { AiOutlineYoutube, AiOutlineInstagram } from "react-icons/ai";
 import { BiLogoTelegram } from "react-icons/bi";
 import { FiTwitter, FiFacebook } from "react-icons/fi";
 import ComputerLogo from "../assets/header/imfooter.png";
-import styles from "./Footer..module.css";
+import styles from "./Footer.module.css";
 
 function Footer() {
     const socialLinks = [

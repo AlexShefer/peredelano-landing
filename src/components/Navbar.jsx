@@ -3,13 +3,13 @@ import styles from "./Navbar.module.css";
 import logoPng from "../assets/header/logo_small.png";
 import { Link } from "react-scroll";
 
-function Navbar() {
+function Navbar({ isPopupOpen }) {
     const [showNavbar, setShowNavbar] = useState(true);
 
     useEffect(() => {
         // Function to handle scroll event
         const handleScroll = () => {
-            if (window.scrollY > 100) {
+            if (window.scrollY > 100 && isPopupOpen) {
                 setShowNavbar(false);
             } else {
                 setShowNavbar(true);
@@ -19,7 +19,10 @@ function Navbar() {
         const handleMouseMove = (event) => {
             const distanceFromMouseToTop = event.clientY;
 
-            if (distanceFromMouseToTop <= 50 || window.scrollY === 0) {
+            if (
+                (distanceFromMouseToTop <= 50 || window.scrollY === 0) &&
+                !isPopupOpen
+            ) {
                 setShowNavbar(true);
             } else {
                 setShowNavbar(false);
@@ -33,7 +36,7 @@ function Navbar() {
             window.removeEventListener("scroll", handleScroll);
             window.removeEventListener("mousemove", handleMouseMove);
         };
-    }, []);
+    }, [isPopupOpen]);
 
     return (
         <header

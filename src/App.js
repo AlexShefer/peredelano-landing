@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Header from "./components/Header";
 import Who from "./components/Who";
 import Where from "./components/Where";
@@ -8,12 +9,13 @@ import ScrollUpButton from "./components/ScrollUpButton";
 import "./server"; // miragejs server
 
 function App() {
+    const [isPopupOpen, setIsPopUpOpen] = useState(false);
     return (
         <div className="app">
-            <Navbar />
+            <Navbar isPopupOpen={isPopupOpen} />
             <Header />
             <Who />
-            <Where />
+            <Where isPopupOpen={isPopupOpen} setIsPopUpOpen={setIsPopUpOpen} />
             <Footer />
             <ScrollUpButton />
         </div>
