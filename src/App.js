@@ -12,8 +12,7 @@ function App() {
     const [isPopupOpen, setIsPopUpOpen] = useState(false);
     return (
         <div className="app">
-            <Navbar isPopupOpen={isPopupOpen} />
-            <Header />
+            <Header isPopupOpen={isPopupOpen} />
             <Who />
             <Where isPopupOpen={isPopupOpen} setIsPopUpOpen={setIsPopUpOpen} />
             <Footer />

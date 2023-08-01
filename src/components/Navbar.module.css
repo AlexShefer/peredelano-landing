@@ -1,7 +1,6 @@
 .header {
     width: 100%;
     min-height: 10vh;
-    background: #e9e9e9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,6 +8,14 @@
     top: 0;
     z-index: 10;
 }
+.header__default_color {
+    background: var(--header-gradient);
+}
+
+.header__color_onscrol {
+    background-color: #e9e9e9;
+}
+
 .wrap {
     display: flex;
     justify-content: space-between;

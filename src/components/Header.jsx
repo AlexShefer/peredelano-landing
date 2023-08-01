@@ -1,10 +1,12 @@
 import React from "react";
 import styles from "./Header.module.css";
 import Button from "./Button";
+import Navbar from "./Navbar";
 
-function Header() {
+function Header({ isPopupOpen }) {
     return (
         <section id="home" className={styles.first}>
+            <Navbar isPopupOpen={isPopupOpen} />
             <h1 className={styles.first__title}>
                 Коктейль IT{" "}
                 <span className={styles.first__title_pink}>конференции</span>,

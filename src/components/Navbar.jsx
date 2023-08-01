@@ -5,14 +5,19 @@ import { Link } from "react-scroll";
 
 function Navbar({ isPopupOpen }) {
     const [showNavbar, setShowNavbar] = useState(true);
+    const [navbarColor, setNavbarColor] = useState("header__default_color");
 
     useEffect(() => {
         // Function to handle scroll event
         const handleScroll = () => {
-            if (window.scrollY > 100 && isPopupOpen) {
+            if (isPopupOpen) {
                 setShowNavbar(false);
+            } else if (window.scrollY > 100) {
+                setShowNavbar(false);
+                setNavbarColor("header__color_onscrol");
             } else {
                 setShowNavbar(true);
+                setNavbarColor("header__default_color");
             }
         };
         // Function to handle mousemove event
@@ -20,7 +25,7 @@ function Navbar({ isPopupOpen }) {
             const distanceFromMouseToTop = event.clientY;
 
             if (
-                (distanceFromMouseToTop <= 50 || window.scrollY === 0) &&
+                (distanceFromMouseToTop <= 150 || window.scrollY === 0) &&
                 !isPopupOpen
             ) {
                 setShowNavbar(true);
@@ -43,6 +48,10 @@ function Navbar({ isPopupOpen }) {
             id="navbar"
             className={`${styles.header} ${
                 showNavbar ? styles.show : styles.hide
+            } ${
+                navbarColor === "header__default_color"
+                    ? styles.header__default_color
+                    : styles.header__color_onscrol
             }`}
         >
             <div className={styles.wrap}>
