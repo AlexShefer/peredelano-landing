@@ -7,9 +7,7 @@
 
 .row {
     display: flex;
-    justify-content: center;
     gap: 5em;
-    max-width: 1024px;
 }
 .locations {
     background: #e9e9e9;
@@ -33,7 +31,6 @@
 }
 
 .locations__text {
-    max-width: 400px;
     width: 100%;
     color: #303030;
     font-family: "Manrope";

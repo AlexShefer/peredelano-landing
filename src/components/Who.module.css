@@ -35,6 +35,6 @@
     .slides__row {
         display: flex;
         gap: 5em;
-        max-width: 1024px;
+        max-width: 1240px;
     }
 }
