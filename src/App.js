@@ -3,7 +3,6 @@ import Header from "./components/Header";
 import Who from "./components/Who";
 import Where from "./components/Where";
 import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
 import ScrollUpButton from "./components/ScrollUpButton";
 
 import "./server"; // miragejs server
