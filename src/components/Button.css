@@ -3,9 +3,9 @@
     max-width: 490px;
     width: 100%;
     text-decoration: none;
-    font-family: "Manrope", sans-serif;
+    font-family: var(--link-text);
     color: #303030;
-    font-size: 1.375rem;
+    font-size: 22px;
     font-weight: 400;
     padding: 0.5em 1em;
     text-align: center;
