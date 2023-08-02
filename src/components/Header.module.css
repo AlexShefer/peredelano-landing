@@ -1,5 +1,5 @@
 .first {
-    min-height: 90vh;
+    min-height: 100vh;
     background-color: var(--header-gradient);
     background-image: url("../assets/header/main.webp");
     background-size: cover;
