@@ -59,7 +59,7 @@
         max-width: 1024px; */
         max-width: 1024px;
         height: 17vw;
-        max-width: 60vw;
+        width: 60vw;
     }
     .first .first__btn {
         display: block;
@@ -119,5 +119,7 @@
     .first__screen_logo::after {
         width: 250px;
         height: 250px;
+        bottom: -50%;
+        left: 4%;
     }
 }
