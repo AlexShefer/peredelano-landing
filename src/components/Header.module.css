@@ -99,8 +99,8 @@
         min-height: 100vh;
     }
     .first__screen_logo::after {
-        bottom: -50%;
-        left: 7%;
+        bottom: -55%;
+        left: 3%;
     }
 }
 @media screen and (min-width: 1840px) {
