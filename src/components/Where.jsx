@@ -48,11 +48,11 @@ function Where({ isPopupOpen, setIsPopUpOpen }) {
         <div className={styles.locations} id="where">
             <div className={styles.wrap}>
                 <h2 className={styles.locations__title}>
-                    Мы создаем комьюнити{" "}
+                    МЫ СОЗДАЕМ КОМЬЮНИТИ{" "}
                     <span className="locations__title locations__title_blue">
-                        по всему миру,
+                        ПО ВСЕМУ МИРУ,
                     </span>{" "}
-                    присоединяйся и в своей стране
+                    ПРИСОЕДИНЯЙСЯ В СВОЕЙ СТРАНЕ
                 </h2>
                 <div className={styles.row}>
                     <p className={styles.locations__text}>
@@ -74,8 +74,8 @@ function Where({ isPopupOpen, setIsPopUpOpen }) {
                         >
                             сообщество единомышленников,
                         </span>{" "}
-                        которые во всем поддерживают друг друга — это наш ответ
-                        на вызовы, которые нам бросила жизнь.
+                        которые во всем поддерживают друг друга. Это ответ на
+                        вызовы, которые нам бросила жизнь.
                     </p>
                     <p className={styles.locations__text}>
                         Мы изобрели{" "}
@@ -87,7 +87,7 @@ function Where({ isPopupOpen, setIsPopUpOpen }) {
                         >
                             Peredelanoconf
                         </span>
-                        , потому что увидели — сообществу русскоязычных
+                        , потому что увидели: сообществу русскоязычных
                         айтишников по всему миру нужна система, которая позволит
                         им{" "}
                         <span
