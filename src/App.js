@@ -5,7 +5,7 @@ import Where from "./components/Where";
 import Footer from "./components/Footer";
 import ScrollUpButton from "./components/ScrollUpButton";
 
-// import "./server"; // miragejs server
+import "./server"; // miragejs server
 
 function App() {
     const [isPopupOpen, setIsPopUpOpen] = useState(false);

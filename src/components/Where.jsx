@@ -11,21 +11,24 @@ function Where({ isPopupOpen, setIsPopUpOpen }) {
     const [locations, setLocations] = useState([]);
     const [selectedLocation, setSelectedLocation] = useState(null);
 
-    useEffect(() => {
-        fetch("https://peredelano-conf-server.onrender.com/api/events")
-            .then((res) => res.json())
-            .then((json) => {
-                setLocations(json);
-            });
-    }, []);
-
+    // Fetch Data from server
     // useEffect(() => {
-    //     fetch("/api/events")
+    //     fetch("https://peredelano-conf-server.onrender.com/api/events")
     //         .then((res) => res.json())
     //         .then((json) => {
-    //             setLocations(json.events);
+    //             setLocations(json);
     //         });
     // }, []);
+
+    // Fetch Data MirageJs
+
+    useEffect(() => {
+        fetch("/api/events")
+            .then((res) => res.json())
+            .then((json) => {
+                setLocations(json.events);
+            });
+    }, []);
 
     // Function to handle card click and open the popup
     const handleCardClick = (location) => {
