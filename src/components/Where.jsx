@@ -12,12 +12,20 @@ function Where({ isPopupOpen, setIsPopUpOpen }) {
     const [selectedLocation, setSelectedLocation] = useState(null);
 
     useEffect(() => {
-        fetch("/api/events")
+        fetch("https://peredelano-conf-server.onrender.com/api/events")
             .then((res) => res.json())
             .then((json) => {
-                setLocations(json.events);
+                setLocations(json);
             });
     }, []);
+
+    // useEffect(() => {
+    //     fetch("/api/events")
+    //         .then((res) => res.json())
+    //         .then((json) => {
+    //             setLocations(json.events);
+    //         });
+    // }, []);
 
     // Function to handle card click and open the popup
     const handleCardClick = (location) => {
