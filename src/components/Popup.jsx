@@ -28,11 +28,11 @@ function Popup({ location, onClose }) {
                         alt={location.city}
                         className={styles.popup__img}
                     />
-                    <img
+                    {/* <img
                         src={`./assets/events/${location.img}.jpg`}
                         alt={location.city}
                         className={styles.popup__img}
-                    />
+                    /> */}
                 </div>
                 <Button link={location.link} className={styles.popup__btn}>
                     присоединиться
