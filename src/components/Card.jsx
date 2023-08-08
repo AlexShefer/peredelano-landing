@@ -9,8 +9,8 @@ const Card = ({ city, date, link, img, description, onClick }) => {
         <>
             <div onClick={onClick} className="card">
                 <img
-                    src={`./assets/events/${encodeURIComponent(img)}.jpg`}
-                    alt="img"
+                    src={`./assets/events/${img}.jpg`}
+                    alt={img}
                     className="card__img"
                 />
                 <h3 className="card__title">{city}</h3>
