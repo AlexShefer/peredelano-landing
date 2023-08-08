@@ -14,7 +14,7 @@ const Card = ({ city, date, link, img, description, onClick }) => {
                     className="card__img"
                 />
                 <h3 className="card__title">{city}</h3>
-                <p className="card__text"> {description} </p>
+                {/* <p className="card__text"> {description} </p> */}
                 <h3 className="card__title date">{date}</h3>
                 <a href={link} className="button" onClick={handleLinkClick}>
                     присоединиться
