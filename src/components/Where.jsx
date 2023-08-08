@@ -5,6 +5,7 @@ import Tabs from "./Tabs";
 import TabPane from "./TabPane";
 import styles from "./Where.module.css";
 import Popup from "./Popup";
+import { formatDateRussian, filterEvents } from "../helper/utils";
 
 function Where({ isPopupOpen, setIsPopUpOpen }) {
     // Send a GET request to the MirageJS server /api/events
@@ -12,23 +13,30 @@ function Where({ isPopupOpen, setIsPopUpOpen }) {
     const [selectedLocation, setSelectedLocation] = useState(null);
 
     // Fetch Data from server
-    // useEffect(() => {
-    //     fetch("https://peredelano-conf-server.onrender.com/api/events")
-    //         .then((res) => res.json())
-    //         .then((json) => {
-    //             setLocations(json);
-    //         });
-    // }, []);
+    useEffect(() => {
+        fetch("https://peredelano-conf-server.onrender.com/api/events")
+            .then((res) => res.json())
+            .then((json) => {
+                const filteredEvents = filterEvents(json);
+                const refractedEvents = filteredEvents.map((event) => {
+                    return {
+                        ...event,
+                        date: formatDateRussian(event.date),
+                    };
+                });
+                setLocations(refractedEvents);
+            });
+    }, []);
 
     // Fetch Data MirageJs
 
-    useEffect(() => {
-        fetch("/api/events")
-            .then((res) => res.json())
-            .then((json) => {
-                setLocations(json.events);
-            });
-    }, []);
+    // useEffect(() => {
+    //     fetch("/api/events")
+    //         .then((res) => res.json())
+    //         .then((json) => {
+    //             setLocations(json.events);
+    //         });
+    // }, []);
 
     // Function to handle card click and open the popup
     const handleCardClick = (location) => {
