@@ -5,31 +5,63 @@ import Tabs from "./Tabs";
 import TabPane from "./TabPane";
 import styles from "./Where.module.css";
 import Popup from "./Popup";
-import { formatDateRussian, filterEvents } from "../helper/utils";
+
+import { events } from "../helper/api";
 
 function Where({ isPopupOpen, setIsPopUpOpen }) {
     // Send a GET request to the MirageJS server /api/events
     const [locations, setLocations] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState(null);
     const [selectedLocation, setSelectedLocation] = useState(null);
 
-    // Fetch Data from server
     useEffect(() => {
-        fetch("https://peredelano-conf-server.onrender.com/api/events")
-            .then((res) => res.json())
-            .then((json) => {
-                const filteredEvents = filterEvents(json);
-                const refractedEvents = filteredEvents.map((event) => {
-                    return {
-                        ...event,
-                        date: formatDateRussian(event.date),
-                    };
-                });
-                setLocations(refractedEvents);
-            });
+        // Fetch van data from the MirageJS server
+        async function loadEvents() {
+            setIsLoading(true);
+            try {
+                const data = await events();
+                setLocations(data);
+            } catch (err) {
+                setError(err);
+            } finally {
+                setIsLoading(false);
+            }
+        }
+
+        loadEvents();
     }, []);
 
-    // Fetch Data MirageJs
+    // Fetch Data from MERN server
+    // useEffect(() => {
+    //     fetch("https://peredelano-conf-server.onrender.com/api/events", {
+    //         credentials: "include",
+    //     })
+    //         .then((res) => {
+    //             if (!res.ok) {
+    //                 throw new Error(
+    //                     `Network response was not ok: ${res.status}`
+    //                 );
+    //             }
+    //             return res.json();
+    //         })
+    //         .then((json) => {
+    //             console.log("Fetch success:", json); // Add this log
+    //             const filteredEvents = filterEvents(json);
+    //             const refractedEvents = filteredEvents.map((event) => {
+    //                 return {
+    //                     ...event,
+    //                     date: formatDateRussian(event.date),
+    //                 };
+    //             });
+    //             setLocations(refractedEvents);
+    //         })
+    //         .catch((error) => {
+    //             console.error("Fetch error:", error);
+    //         });
+    // }, []);
 
+    // Fetch Data from MirageJs
     // useEffect(() => {
     //     fetch("/api/events")
     //         .then((res) => res.json())
