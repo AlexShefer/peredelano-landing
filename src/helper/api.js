@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+// import { getAnalytics } from "firebase/analytics";
 import { collection, getFirestore, getDocs } from "firebase/firestore";
 import { formatDateRussian, filterEvents } from "../helper/utils";
 

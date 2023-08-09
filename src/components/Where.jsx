@@ -11,21 +11,18 @@ import { events } from "../helper/api";
 function Where({ isPopupOpen, setIsPopUpOpen }) {
     // Send a GET request to the MirageJS server /api/events
     const [locations, setLocations] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState(null);
+    // const [isLoading, setIsLoading] = useState(false);
+    // const [error, setError] = useState(null);
     const [selectedLocation, setSelectedLocation] = useState(null);
 
     useEffect(() => {
         // Fetch van data from the MirageJS server
         async function loadEvents() {
-            setIsLoading(true);
             try {
                 const data = await events();
                 setLocations(data);
             } catch (err) {
-                setError(err);
-            } finally {
-                setIsLoading(false);
+                console.log(err);
             }
         }
 
