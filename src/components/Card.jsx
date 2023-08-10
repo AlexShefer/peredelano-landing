@@ -15,7 +15,7 @@ const Card = ({ city, date, link, img, description, onClick }) => {
     const handleLinkClick = (event) => {
         event.stopPropagation();
     };
-    console.log(isImageLoaded);
+
     return (
         <>
             <div onClick={onClick} className="card">
