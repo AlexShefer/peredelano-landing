@@ -3,14 +3,18 @@ import { initializeApp } from "firebase/app";
 import { collection, getFirestore, getDocs } from "firebase/firestore";
 import { formatDateRussian, filterEvents } from "../helper/utils";
 
+console.log(
+    process.env.REACT_APP_STORAGE_BUCKET === "peredelanoconf-de9fd.appspot.com"
+);
+
 const firebaseConfig = {
-    apiKey: "AIzaSyCY9cOSHi5lrKMhM6M-J23fsT03U9k2YSE",
-    authDomain: "peredelanoconf-de9fd.firebaseapp.com",
-    projectId: "peredelanoconf-de9fd",
-    storageBucket: "peredelanoconf-de9fd.appspot.com",
-    messagingSenderId: "281887173350",
-    appId: "1:281887173350:web:0389d20872fb4a9c382927",
-    measurementId: "G-FVQ9YK1FPR",
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGIN_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID,
+    measurementId: process.env.REACT_APP_MEASURMENT_ID,
 };
 
 // Initialize Firebase
