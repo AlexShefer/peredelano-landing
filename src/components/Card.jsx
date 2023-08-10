@@ -1,18 +1,48 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+
 import "./Card.css";
 
 const Card = ({ city, date, link, img, description, onClick }) => {
+    const [isImageLoaded, setIsImageLoaded] = React.useState(false);
+
+    const handleLoad = () => {
+        setIsImageLoaded((prev) => true);
+    };
+
     const handleLinkClick = (event) => {
         event.stopPropagation();
     };
+    console.log(isImageLoaded);
     return (
         <>
             <div onClick={onClick} className="card">
-                <img
-                    src={`./assets/events/${img}.jpg`}
-                    alt={img}
-                    className="card__img"
-                />
+                <div className="card__img" style={{ position: "relative" }}>
+                    <LazyLoadImage
+                        src={`./assets/events/${img}.jpg`}
+                        alt={img}
+                        className="card__img"
+                        onLoad={handleLoad}
+                        style={{
+                            position: "absolute",
+                            width: "100%",
+                            height: "100%",
+                            zIndex: isImageLoaded ? 5 : 0,
+                        }}
+                    />
+                    <Skeleton
+                        style={{
+                            borderRadius: 0,
+                            position: "absolute",
+                            width: "100%",
+                            height: "100%",
+                            zIndex: isImageLoaded ? 0 : 5,
+                        }}
+                    />
+                </div>
+
                 <h3 className="card__title">{city}</h3>
                 {/* <p className="card__text"> {description} </p> */}
                 <h3 className="card__title date">{date}</h3>

@@ -3,10 +3,6 @@ import { initializeApp } from "firebase/app";
 import { collection, getFirestore, getDocs } from "firebase/firestore";
 import { formatDateRussian, filterEvents } from "../helper/utils";
 
-console.log(
-    process.env.REACT_APP_STORAGE_BUCKET === "peredelanoconf-de9fd.appspot.com"
-);
-
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_API_KEY,
     authDomain: process.env.REACT_APP_AUTH_DOMAIN,
