@@ -5,12 +5,23 @@ import "react-loading-skeleton/dist/skeleton.css";
 
 import "./Card.css";
 
-const Card = ({ city, date, link, img, description, onClick }) => {
-    const [isImageLoaded, setIsImageLoaded] = React.useState(false);
+const Card = ({
+    city,
+    date,
+    link,
+    img,
+    description,
+    onClick,
+    isImageLoaded,
+    setIsImageLoaded,
+}) => {
+    // const [isImageLoaded, setIsImageLoaded] = React.useState(false);
 
     const handleLoad = () => {
         setIsImageLoaded((prev) => true);
+        // console.log("trigered");
     };
+    // console.log(isImageLoaded);
 
     const handleLinkClick = (event) => {
         event.stopPropagation();

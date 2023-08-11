@@ -15,6 +15,8 @@ function Where({ isPopupOpen, setIsPopUpOpen }) {
     // const [error, setError] = useState(null);
     const [selectedLocation, setSelectedLocation] = useState(null);
 
+    const [isImageLoaded, setIsImageLoaded] = React.useState(false);
+
     useEffect(() => {
         // Fetch van data from the MirageJS server
         async function loadEvents() {
@@ -170,6 +172,8 @@ function Where({ isPopupOpen, setIsPopUpOpen }) {
                                         city={location.city}
                                         description={location.description}
                                         link={location.link}
+                                        isImageLoaded={isImageLoaded}
+                                        setIsImageLoaded={setIsImageLoaded}
                                         onClick={() =>
                                             handleCardClick(location)
                                         }
@@ -188,6 +192,8 @@ function Where({ isPopupOpen, setIsPopUpOpen }) {
                                         city={location.city}
                                         description={location.description}
                                         link={location.link}
+                                        isImageLoaded={isImageLoaded}
+                                        setIsImageLoaded={setIsImageLoaded}
                                         onClick={() =>
                                             handleCardClick(location)
                                         }
@@ -206,6 +212,8 @@ function Where({ isPopupOpen, setIsPopUpOpen }) {
                                         city={location.city}
                                         description={location.description}
                                         link={location.link}
+                                        isImageLoaded={isImageLoaded}
+                                        setIsImageLoaded={setIsImageLoaded}
                                         onClick={() =>
                                             handleCardClick(location)
                                         }
@@ -224,6 +232,8 @@ function Where({ isPopupOpen, setIsPopUpOpen }) {
                                         city={location.city}
                                         description={location.description}
                                         link={location.link}
+                                        isImageLoaded={isImageLoaded}
+                                        setIsImageLoaded={setIsImageLoaded}
                                         onClick={() =>
                                             handleCardClick(location)
                                         }
