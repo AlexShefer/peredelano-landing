@@ -6,7 +6,7 @@ import TabPane from "./TabPane";
 import styles from "./Where.module.css";
 import Popup from "./Popup";
 
-import { events } from "../helper/api";
+import { processData } from "../helper/api";
 
 function Where({ isPopupOpen, setIsPopUpOpen }) {
     // Send a GET request to the MirageJS server /api/events
@@ -17,11 +17,13 @@ function Where({ isPopupOpen, setIsPopUpOpen }) {
 
     const [isImageLoaded, setIsImageLoaded] = React.useState(false);
 
+    const [selectedTabIndex, setSelectedTabIndex] = useState(0);
+
     useEffect(() => {
         // Fetch van data from the MirageJS server
         async function loadEvents() {
             try {
-                const data = await events();
+                const data = await processData();
                 setLocations(data);
             } catch (err) {
                 console.log(err);
@@ -29,6 +31,16 @@ function Where({ isPopupOpen, setIsPopUpOpen }) {
         }
 
         loadEvents();
+        // async function loadEvents() {
+        //     try {
+        //         const data = await events();
+        //         setLocations(data);
+        //     } catch (err) {
+        //         console.log(err);
+        //     }
+        // }
+
+        // loadEvents();
     }, []);
 
     // Fetch Data from MERN server
@@ -160,7 +172,11 @@ function Where({ isPopupOpen, setIsPopUpOpen }) {
                         друг другу.
                     </p>
                 </div>
-                <Tabs>
+
+                <Tabs
+                    selectedTabIndex={selectedTabIndex}
+                    setSelectedTabIndex={setSelectedTabIndex}
+                >
                     <TabPane title="Европа">
                         <div className={styles.tabs__content}>
                             {europeLocations &&

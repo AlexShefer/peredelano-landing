@@ -1,33 +1,32 @@
-import React, { useState } from 'react';
+import React from "react";
 
-import styles from './Tabs.module.css';
-import TabTitle from './TabTitle';
-
+import styles from "./Tabs.module.css";
+import TabTitle from "./TabTitle";
 
 const Tabs = (props) => {
-  const { children } = props;
+    const { children } = props;
 
-  // First tab is shown by default
-  const [selectedTabIndex, setSelectedTabIndex] = useState(0);
+    // First tab is shown by default
+    // const [selectedTabIndex, setSelectedTabIndex] = useState(0); Moved to where
 
-  return (
-    <div className={styles.tabs}>
-      <ul className={styles.tabs__nav}>
-        {children.map((item, index) => (
-          <TabTitle
-            key={item.props.title}
-            title={item.props.title}
-            index={index}
-            isActive={index === selectedTabIndex}
-            setSelectedTab={setSelectedTabIndex}
-          />
-        ))}
-      </ul>
+    return (
+        <div className={styles.tabs}>
+            <ul className={styles.tabs__nav}>
+                {children.map((item, index) => (
+                    <TabTitle
+                        key={item.props.title}
+                        title={item.props.title}
+                        index={index}
+                        isActive={index === props.selectedTabIndex}
+                        setSelectedTab={props.setSelectedTabIndex}
+                    />
+                ))}
+            </ul>
 
-      {/* show selcted tab by index*/}
-      {children[selectedTabIndex]}
-    </div>
-  );
+            {/* show selcted tab by index*/}
+            {children[props.selectedTabIndex]}
+        </div>
+    );
 };
 
 export default Tabs;
