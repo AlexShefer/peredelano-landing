@@ -63,6 +63,7 @@ function Navbar({ isPopupOpen }) {
                     duration={500}
                     tabIndex={showNavbar ? 0 : -1}
                     aria-label="Home"
+                    className={styles.header__link}
                 >
                     <img
                         src={logoPng}

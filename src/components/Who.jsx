@@ -4,11 +4,11 @@ import Carousel from "./Carousel";
 
 function Who() {
     const images = [
-        "../assets/1.webp",
+        "../assets/slider/1.webp",
         "../assets/slider/Polaroid3.png",
-        "../assets/2.webp",
+        "../assets/slider/2.webp",
         "../assets/slider/Polaroid4.png",
-        "../assets/11.webp",
+        "../assets/slider/11.webp",
         "../assets/slider/Polaroid5.png",
     ];
     return (

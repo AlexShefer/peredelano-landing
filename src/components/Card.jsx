@@ -32,8 +32,9 @@ const Card = ({
             <div onClick={onClick} className="card">
                 <div className="card__img" style={{ position: "relative" }}>
                     <LazyLoadImage
-                        src={`./assets/events/${img}.jpg`}
-                        alt={img}
+                        // src={`./assets/events/${img}.jpg`}
+                        src={img}
+                        alt={city}
                         className="card__img"
                         onLoad={handleLoad}
                         style={{

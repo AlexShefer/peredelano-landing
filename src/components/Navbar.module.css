@@ -40,6 +40,10 @@
     position: relative;
 }
 
+.header__link:hover,
+.header__nav__link:hover {
+    cursor: pointer;
+}
 .header__nav__link:hover::before,
 .header__nav__link_active::before {
     content: "";
