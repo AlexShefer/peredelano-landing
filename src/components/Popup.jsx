@@ -24,7 +24,7 @@ function Popup({ location, onClose }) {
 
                 <div className={styles.popup__images}>
                     <img
-                        src={`./assets/events/${location.img}.jpg`}
+                        src={location.img}
                         alt={location.city}
                         className={styles.popup__img}
                     />
