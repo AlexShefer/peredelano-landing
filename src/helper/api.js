@@ -38,7 +38,11 @@ export async function processData() {
         const data = await getEvents();
         const events = data.Sheet1;
         events.shift();
-        const refractedEvents = events.sort((a, b) => a.date - b.date);
+        // const refractedEvents = events.sort((a, b) => a.date - b.date);
+        const refractedEvents = events.sort(
+            (a, b) => new Date(a.date) - new Date(b.date)
+        );
+        console.log(refractedEvents);
         const filteredEvents = filterEvents(refractedEvents).map((event) => ({
             ...event,
             date: formatDateRussian(event.date),
