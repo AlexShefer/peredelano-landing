@@ -42,7 +42,6 @@ export async function processData() {
         const refractedEvents = events.sort(
             (a, b) => new Date(a.date) - new Date(b.date)
         );
-        console.log(refractedEvents);
         const filteredEvents = filterEvents(refractedEvents).map((event) => ({
             ...event,
             date: formatDateRussian(event.date),
