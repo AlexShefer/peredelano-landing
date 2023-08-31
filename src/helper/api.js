@@ -44,7 +44,6 @@ export async function processData() {
                 ...event,
                 date: "СКОРО",
             }));
-        console.log("unassignedEvents", unassignedEvents);
         const refractedEvents = events
             .filter((event) => event.date)
             .sort((a, b) => new Date(a.date) - new Date(b.date));
