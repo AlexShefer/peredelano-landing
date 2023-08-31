@@ -38,16 +38,21 @@ export async function processData() {
         const data = await getEvents();
         const events = data.Sheet1;
         events.shift();
-        // const refractedEvents = events.sort((a, b) => a.date - b.date);
-        const refractedEvents = events.sort(
-            (a, b) => new Date(a.date) - new Date(b.date)
-        );
+        const unassignedEvents = events
+            .filter((event) => !event.date)
+            .map((event) => ({
+                ...event,
+                date: "СКОРО",
+            }));
+        console.log("unassignedEvents", unassignedEvents);
+        const refractedEvents = events
+            .filter((event) => event.date)
+            .sort((a, b) => new Date(a.date) - new Date(b.date));
         const filteredEvents = filterEvents(refractedEvents).map((event) => ({
             ...event,
             date: formatDateRussian(event.date),
         }));
-
-        return filteredEvents;
+        return filteredEvents.concat(unassignedEvents);
     } catch (error) {
         console.error("Error fetching and processing events:", error);
     }
