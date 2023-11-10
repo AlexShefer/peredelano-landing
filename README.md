@@ -20,15 +20,20 @@ const firebaseConfig = {
     apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
     databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
 }
+```
+
 ## Technologies
 
-- ReactJs
-- JavaScript
-- CSS (BEM)
-- Firebase Realtime Database
-- Google SpreadSheet
+-   ReactJs
+-   JavaScript
+-   CSS (BEM)
+-   Firebase Realtime Database
+-   Google SpreadSheet
 
 ## Collaboration
 
 This project created in collaboration with [Ksanka](https://github.com/ksankakovsh)
+
+```
+
 ```
