@@ -6,9 +6,6 @@ import TabTitle from "./TabTitle";
 const Tabs = (props) => {
     const { children } = props;
 
-    // First tab is shown by default
-    // const [selectedTabIndex, setSelectedTabIndex] = useState(0); Moved to where
-
     return (
         <div className={styles.tabs}>
             <ul className={styles.tabs__nav}>

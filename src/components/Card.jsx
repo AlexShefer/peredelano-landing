@@ -15,13 +15,9 @@ const Card = ({
     isImageLoaded,
     setIsImageLoaded,
 }) => {
-    // const [isImageLoaded, setIsImageLoaded] = React.useState(false);
-
     const handleLoad = () => {
         setIsImageLoaded((prev) => true);
-        // console.log("trigered");
     };
-    // console.log(isImageLoaded);
 
     const handleLinkClick = (event) => {
         event.stopPropagation();
@@ -32,7 +28,6 @@ const Card = ({
             <div onClick={onClick} className="card">
                 <div className="card__img" style={{ position: "relative" }}>
                     <LazyLoadImage
-                        // src={`./assets/events/${img}.jpg`}
                         src={img}
                         alt={city}
                         className="card__img"
@@ -56,7 +51,6 @@ const Card = ({
                 </div>
 
                 <h3 className="card__title">{city}</h3>
-                {/* <p className="card__text"> {description} </p> */}
                 <h3 className="card__title date">{date}</h3>
                 <a href={link} className="button" onClick={handleLinkClick}>
                     присоединиться

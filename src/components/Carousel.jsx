@@ -34,22 +34,18 @@ function Carousel({ data }) {
     }, [data.length, columns]);
 
     const handleResize = React.useCallback(() => {
-        // Update the number of columns based on the screen width
         setColumns(window.innerWidth < 1024 ? 1 : 3);
     }, []);
 
     useEffect(() => {
         resetInterval();
 
-        // Add event listeners on mount
         window.addEventListener("resize", handleResize);
 
-        // Clean up event listeners on unmount
         return () => {
             if (intervalRef.current) {
                 clearInterval(intervalRef.current);
             }
-            // Remove the dependency on 'resetInterval' by calling the function directly
             resetInterval();
             window.removeEventListener("resize", handleResize);
         };

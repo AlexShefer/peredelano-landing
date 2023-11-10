@@ -9,10 +9,8 @@ import Popup from "./Popup";
 import { processData } from "../helper/api";
 
 function Where({ isPopupOpen, setIsPopUpOpen }) {
-    // Send a GET request to the MirageJS server /api/events
     const [locations, setLocations] = useState([]);
-    // const [isLoading, setIsLoading] = useState(false);
-    // const [error, setError] = useState(null);
+
     const [selectedLocation, setSelectedLocation] = useState(null);
 
     const [isImageLoaded, setIsImageLoaded] = React.useState(false);
@@ -31,55 +29,7 @@ function Where({ isPopupOpen, setIsPopUpOpen }) {
         }
 
         loadEvents();
-        // async function loadEvents() {
-        //     try {
-        //         const data = await events();
-        //         setLocations(data);
-        //     } catch (err) {
-        //         console.log(err);
-        //     }
-        // }
-
-        // loadEvents();
     }, []);
-
-    // Fetch Data from MERN server
-    // useEffect(() => {
-    //     fetch("https://peredelano-conf-server.onrender.com/api/events", {
-    //         credentials: "include",
-    //     })
-    //         .then((res) => {
-    //             if (!res.ok) {
-    //                 throw new Error(
-    //                     `Network response was not ok: ${res.status}`
-    //                 );
-    //             }
-    //             return res.json();
-    //         })
-    //         .then((json) => {
-    //             console.log("Fetch success:", json); // Add this log
-    //             const filteredEvents = filterEvents(json);
-    //             const refractedEvents = filteredEvents.map((event) => {
-    //                 return {
-    //                     ...event,
-    //                     date: formatDateRussian(event.date),
-    //                 };
-    //             });
-    //             setLocations(refractedEvents);
-    //         })
-    //         .catch((error) => {
-    //             console.error("Fetch error:", error);
-    //         });
-    // }, []);
-
-    // Fetch Data from MirageJs
-    // useEffect(() => {
-    //     fetch("/api/events")
-    //         .then((res) => res.json())
-    //         .then((json) => {
-    //             setLocations(json.events);
-    //         });
-    // }, []);
 
     // Function to handle card click and open the popup
     const handleCardClick = (location) => {
